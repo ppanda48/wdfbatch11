@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document Object</title>
+    <link href="./css/l47documentobject.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Todo List</h3>
+
+                <form id="form" class="form" action="" method="">
+                    
+                    <div class="form-group">
+                        <label for="task">Enter New Task</label>
+                        <input type="text" name="task" id="task" class="form-control" />
+                    </div>
+
+                    <input type="submit" class="btn" value="Add Task" />
+
+                </form>
+
+            </div>
+            <div class="card-footer">
+                <h4 id="tasktitle">All My Tasks</h4>
+
+                <ul id="task-list" class="list-group">
+                    <li class="list-group-item">
+                        List Item 1
+                        <a href="#" id="delete-item1" class="delete-item" title="iamtitle" alt="iamalt">
+                            <i class="fas fa-trash-alt"></i> delete
+                        </a>
+                    </li>
+
+                    <li class="list-group-item">
+                        List Item 2
+                        <a href="#" id="delete-item2" class="delete-item" title="iamtitle" alt="iamalt">
+                            <i class="fas fa-trash-alt"></i> delete
+                        </a>
+                    </li>
+
+                    <li class="list-group-item">
+                        List Item 3
+                        <a href="#" id="delete-item3" class="delete-item" title="iamtitle" alt="iamalt">
+                            <i class="fas fa-trash-alt"></i> delete
+                        </a>
+                    </li>
+
+                    <li class="list-group-item">
+                        List Item 4
+                        <a href="#" id="delete-item4" class="delete-item myitem" title="iamtitle" alt="iamalt">
+                            <i class="fas fa-trash-alt"></i> delete
+                        </a>
+                    </li>
+
+                    <li class="list-group-item">
+                        List Item 5
+                        <a href="#" id="delete-item5" class="delete-item" title="iamtitle" alt="iamalt">
+                            <i class="fas fa-trash-alt"></i> delete
+                        </a>
+                    </li>
+
+                </ul>
+
+                <a href="www.google.com" id="clearall" class="clear-tasks">Clear Tasks</a>
+
+            </div>
+
+            <div class="moretasks">
+                <img src="https://i.gifer.com/ZKZg.gif" id="loading" class="loading" alt="loader" />
+            </div>
+
+        </div>
+    </div>
+
+    <script src="./js/l47documentobject.js" type="text/javascript"></script>
+
+</body>
+</html>

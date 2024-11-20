@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Template String</title>
+</head>
+<body>
+
+    <ul>
+        <li>Name: Honey Nway Oo</li>
+        <li>Age: 23</li>
+        <li>Job: Model</li>
+        <li>City: Yangon</li>
+    </ul>
+
+    <script type="text/javascript">
+        
+        // var fullname;
+        // console.log(fullname); // oki = undefined
+        // const fullname; // error
+        // console.log(fullname);
+
+        const name = "Honey Nway Oo";
+        const age = 23;
+        const job = "Model";
+        const city = "Yangon";
+
+        document.write(name);
+        document.write(age);
+        document.write(job);
+        document.write(city);
+
+
+        let myliststyle;
+        // console.log(myliststyle); // undefined
+
+        // myliststyle = "<h1>Helle World</h1>";
+        // myliststyle = "<h1>Helle Global</h1>";
+        // myliststyle = "<h1>Helle Human</h1>";
+
+        // console.log(myliststyle); // <h1>Hello World</h1>
+
+        // Without Template String
+
+        myliststyle = "<ul>" +
+            "<li>Name: " + name + "</li>" +
+            "<li>Age: " + age + "</li>" +
+            "<li>Job: " + job + "</li>" + 
+            "<li>City: " + city + "</li>" +
+       "</ul>"
+
+        document.write(myliststyle)
+
+        // Template String (``)
+
+        myliststyle = `
+            <ul>
+                <li>Name: Honey Nway Oo</li>
+                <li>Age: 21</li>
+                <li>Job: Model</li>
+                <li>City: Yangon</li>
+            </ul>
+        `
+
+        document.write(myliststyle)
+
+    </script>
+</body>
+</html>

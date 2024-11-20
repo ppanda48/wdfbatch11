@@ -1,0 +1,98 @@
+=>git
+
+
+
+=for linux
+sudo apt-get update
+sudo apt-get upgrade -y
+sudo apt-get install git
+
+
+git
+git --version           (git version 2.39.2) (2.47.0)
+
+
+----------------------------------------------------------------------------
+=>Config Git
+
+== ONE TIME
+
+git config --global user.name "datalandtechnology"
+git config user.name
+
+git config --global user.email "datalandtechnology@gmail.com"
+git config user.email
+
+
+----------------------------------------------------------------------------
+
+=>Connect to Github Server ( using SSH (Secure Shell) )
+
+== ONE TIME
+
+ssh-keygen
+
+
+== Get key after generate ( for linux )
+ls -l ~/.ssh
+cat ~/.ssh/id._rsa.pub
+
+
+== Check SSH Connection is successful or not
+ssh -T git@github.com
+
+
+
+----------------------------------------------------------------------------
+
+=>github
+
+<!-- echo "# wdf11project" >> README.md- -->
+git init
+<!-- git add README.md -->
+
+git remote add origin git@github.com:ppanda48/wdf11project.git
+
+git status
+git add -A              git add *               git add .
+git status
+git commit -m "first commit"
+git status
+git push -u origin main                          (u mean = upstream) (origin main / orgin master)
+
+
+=>update
+
+
+git remote add origin git@github.com:ppanda48/wdf11project.git
+git branch -M main
+git push -u origin main                         (origin main / orgin master)
+
+
+
+=>Clone
+
+git clone git@github.com:ppanda48/wdf11project.git
+
+
+
+=> Public Page
+
+Setings > Pages > Branch (choose main branch) > click "save"
+
+
+
+----------------------------------------------------------------------------
+
+=> If Something went wrong
+
+1.git (working or not)
+2.command promt (os or git command)
+3.vpn (need or not)
+4.project path info
+5.check ssh auth ( optional , if you are using ssh connection)
+
+
+
+
+To paste in Git command => ( Shift + Insert )

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        // (A) Default Function | System Function
+        // (B) User Define Function
+                // (1) Regular Function 
+                        // (i) Manual Function
+                        // (ii) Parameter Function
+                                    // (a) Single Parameter Function
+                                    // (b) Multi Parameter Function
+                // (2) Arrow Function 
+                        // (i) Manual Function
+                        // (ii) Parameter Function
+                                    // (a) Single Parameter Function
+                                    // (b) Multi Parameter Function
+                // (3) Generator Function 
+
+        function test1(){
+            return 10;
+        }
+
+        console.log(test1); // 10
+        console.log(test1); // 10
+        console.log(test1); // 10
+
+        function test2(){
+            var x=1;
+            x++;
+            return x;
+        }
+
+        console.log(test2()); // 2
+        console.log(test2()); // 2
+        console.log(test2()); // 2
+
+
+
+        var y = 1;
+
+        function test3(){
+            y++;
+            return y;
+        }
+
+        console.log(test3()); // 2
+        console.log(test3()); // 3
+        console.log(test3()); // 4
+
+
+        // (3) Generator Function
+                            // yield
+                            // next()
+
+        function* genfun(){
+            // yield 1;
+
+            yield 1;
+            yield 2;
+            yield 3;
+        }
+
+        // console.log(genfun()); // genfun {<suspended>}
+        // console.log(genfun().next()); // genfun {value: 1, done: false}
+        // console.log(genfun().next().value); // 1
+        // console.log(genfun().next().value); // 1
+        // console.log(genfun().next().value); // 1
+
+        const getgunfun = genfun();
+        // console.log(getgunfun); // genfun {<suspended>}
+        // console.log(getgunfun.next()); // genfun {value: 1, done: false}
+        // console.log(getgunfun.next()); // genfun {value: 2, done: false}
+        // console.log(getgunfun.next()); // genfun {value: 3, done: false}
+        // console.log(getgunfun.next()); // genfun {value: undefined, done: true}
+
+        console.log(getgunfun.next().value); // 1
+        console.log(getgunfun.next().value); // 2
+        console.log(getgunfun.next().value); // 3
+        console.log(getgunfun.next().value); // undefined
+        console.log(getgunfun.next().value); // undefined
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Date And Time</title>
+</head>
+<body>
+
+    <div>
+        <small>&copy; <span id="autoyear">2024</span> Cable News Network. A Warner Bros. Discovery Company. All Rights Reserved. </small>
+    </div>
+
+    <script>
+        
+        let mydate = new Date(); // class object
+        console.log(mydate); // Wed Sep 18 2024 20:25:02 GMT+0630 (Myanmar Time)
+        console.log(typeof mydate); // object
+        console.log(new Date()); // Wed Sep 18 2024 20:26:53 GMT+0630 (Myanmar Time)
+
+        let getdate = new Date().getDate(); // method
+        console.log(getdate); // 18
+
+        let hour = new Date().getHours();
+        console.log(hour); // 20
+
+        let minute = mydate.getMinutes();
+        console.log(minute); // 39
+
+        let second = mydate.getSeconds();
+        console.log(second); // 39
+
+
+        // 1s == 1000ms
+        // 1 jan 1970 > uptonow
+        let time = mydate.getTime();
+        console.log(time); // 1726669272419
+
+        let now = Date.now();
+        console.log(now); // 1726669272420
+
+
+        //    0  ,  1  ,  2  ,  3  ,  4  ,   5  ,  6   ,  7  ,  8  ,  9  ,  10,   11
+        // ['jan','feb','mar','apr','may','june','july','aug','sep','oct','nov','dec']
+
+        let month = mydate.getMonth();
+        console.log(month); // 8
+
+        //    0  ,  1  ,  2  ,  3  ,  4  ,  5  ,  6 
+        // ['sun','mon','tue','wed','thu','fri','sat']
+        let day = mydate.getDay();
+        console.log(day); // 3
+
+        let year = mydate.getFullYear();
+        console.log(year); // 2024
+
+        // Coordinate Universal Time -12 +6:30 +12
+        let utcyear = mydate.getUTCFullYear();
+        console.log(utcyear); // 2024
+
+        // document.getElementById("autoyear").textContent = utcyear;
+        // document.getElementById("autoyear").innerText = utcyear;
+        document.getElementById("autoyear").innerHTML = utcyear;
+
+        // m d y hr:m:s
+        let birthday = new Date("7-10-2020"); // Fri Jul 10 2020 00:00:00 GMT+0630 (Myanmar Time)
+            birthday = new Date("8-1-2023 11:35:01"); // Tue Aug 01 2023 11:35:01 GMT+0630 (Myanmar Time)
+            birthday = new Date("Aug-2-2023 11:35:01");
+            birthday = new Date("Aug 2 2023 11:35:01");
+            birthday = new Date("July 1 2023 11:35:01");
+            birthday = new Date("Aug 2 2023 11:35:01");
+            birthday = new Date("5/102023 11:35:01");
+
+        cosole.log(birthday); // Wed May 10 2023 11:35:01 GMT+0630 (Myanmar Time)
+        console.log(birthday.getMonth()); // 4
+
+        birthday.setMonth(2); // Fri Mar 10 2023 11:35:01 GMT+0630 (Myanmar Time)
+        birthday.setDate(15); // Wed Mar 15 2023 11:35:01 GMT+0630 (Myanmar Time)
+        birthday.setFullYear(2024); // Fri Mar 15 2024 11:35:01 GMT+0630 (Myanmar Time)
+
+        birthday.setHours(15); // Fri Mar 15 2024 15:35:01 GMT+0630 (Myanmar Time)
+        birthday.setMinutes(50); // Fri Mar 15 2024 15:50:01 GMT+0630 (Myanmar Time)
+        birthday.setSeconds(59); // Fri Mar 15 2024 15:50:59 GMT+0630 (Myanmar Time)
+
+    </script>
+</body>
+</html>
+
+// 63%
